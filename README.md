@@ -1,8 +1,8 @@
 # Polylith Demo
 
 ```shell
-> uv run poly check
-🤔 Cannot locate httpx in lambda
+fraser.langton@KWT1321 polylith-demo % uv run poly check
+🤔 Cannot locate httpx, requests in lambda
 ```
 
 ## Repository Structure
@@ -13,16 +13,18 @@ polylith-demo/
 │   └── demo/
 │       └── rest_api/
 │           ├── __init__.py
-│           ├── core.py
+│           ├── core.py  <-- has fastapi
 │           └── tests/
-│               └── test_api.py
+│               └── test_api.py  <-- has httpx
 ├── components/
 │   └── demo/
 │       └── c1/
 │           ├── __init__.py
-│           └── core.py
+│           └── core.py  <-- has pydantic
+│           └── tests/
+│               └── test_core.py  <-- has requests
 ├── development/
 ├── projects/
 │   └── lambda/
-│       └── pyproject.toml
+│       └── pyproject.toml  <-- has fastapi, pydantic in deps
 ```
