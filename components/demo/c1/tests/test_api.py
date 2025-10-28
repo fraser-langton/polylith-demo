@@ -1,4 +1,4 @@
-import httpx
+import requests
 
 from . import core
 
